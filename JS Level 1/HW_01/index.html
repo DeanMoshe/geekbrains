@@ -1,0 +1,54 @@
+<!--
+	Homework 1
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+// Set the temperature in degrees Celsius. Display the corresponding temperature in Fahrenheit in the alert. Hint: the calculation is carried out according to the formula Tf = (9/5) * Tc + 32, where Tf is the temperature in Fahrenheit, Tc is in Celsius.
+        
+		var celsium = +prompt("Please, enter the number of Celsius degrees");
+		var farenheit = (9/5)*celsium + 32;
+		alert("Farenheit "+farenheit);
+
+// Declare two variables: admin and name. Write the string "Frank" in the name; Copy the value from name to admin. Display admin (should display "Frank").
+        
+		var admin;
+		var name = "Frank";
+		admin = name;
+		alert ("Administrator: "+name);
+
+// Swap integer variables.
+
+//Method #1 
+        
+        var a = 10;
+        var b = 20;
+        a = a+b;
+        b = a-b;
+        a = a-b;
+        alert("A = "+a+"; B = "+b);
+
+//Method #2
+        
+		var a = 10;
+		var b = 20;
+		[a,b]=[b,a];
+		alert("A = "+a+"; B = "+b);
+       
+//Method #3
+        
+        var a = 10;
+		var b = 20;
+		a = a^b;
+		b = a^b;
+		a = a^b;
+		alert("A = "+a+"; B = "+b);
+	</script>
+</body>
+</html>

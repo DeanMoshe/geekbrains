@@ -1,0 +1,59 @@
+<!--
+    Homework 5:
+
+    Create a function that generates a checkerboard. In this case, you can use any html tags you want.
+    The board must be properly lined, i.e.valternate black and white cells.
+    Lines should be numbered from 1 to 8, columns - letters A, B, C, D, E, F, G, H.
+    The board must be filled with chess pieces.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chessboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function chessdesk() {//Chessrboard function declaration
+            var newTable = document.createElement('table'),// creating a table without cells
+                name = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', ''],//array of letters
+                blackFigs1 = ['8', '&#9820;', '&#9822;', '&#9821;', '&#9819;', '&#9818;', '&#9821;', '&#9822;', '&#9820;', '8'],//array of black chess pieces on line 1
+                blackFigs2 = ['7', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '7'],//array of black chess pieces on line 2
+                whiteFigs1 = ['1', '&#9814;', '&#9816;', '&#9815;', '&#9813;', '&#9812;', '&#9815;', '&#9816;', '&#9814;', '1'],//array of white chess pieces on line 8
+                whiteFigs2 = ['2', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '2'];//array of white chess pieces on line 7
+            for (var i = 0, a = 9; i < 10, a >= 0; i++, a--) { //creating a row counter for the board, i is the string, a is the element number from the array
+                var newTr = newTable.insertRow(i); //creating row
+                for (var j = 0; j < 10; j++) {//counter for columns
+                    var newTd = newTr.insertCell(j); //row cell creation
+                    switch (i) {
+                        case 0:
+                        case 9://for lines with index 0 and 9 we set letters
+                            newTd.innerText = name[j];
+                            break;
+                        case 1: //for line with index 1, set the array of figures blackFigs1
+                            newTd.innerHTML = blackFigs1[j];
+                            break;
+                        case 2://for line with index 2, set the array of figures blackFigs2
+                            newTd.innerHTML = blackFigs2[j];
+                            break;
+                        case 7://for line with index 7, set the array of figures whiteFigs2
+                            newTd.innerHTML = whiteFigs2[j];
+                            break;
+                        case 8://for line with index 8, set the array of figures whiteFigs1
+                            newTd.innerHTML = whiteFigs1[j];
+                            break;
+                        default: //setting numbers for rows 0 and 9
+                            if (j === 0 || j === 9) {
+                                newTd.innerHTML = a;
+                            }
+                    }
+                }
+            }
+            document.body.appendChild(newTable); //output of the table to the body
+        }
+        chessdesk(); //a function call to create a table
+    </script>
+</body>
+</html>

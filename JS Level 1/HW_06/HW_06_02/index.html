@@ -1,0 +1,71 @@
+<!--
+	Homework 6.2:
+
+	Implement the cart module. Create a product block and a cart block. Each product has a Buy button, 
+	when you click on it, the name and price of the product will be added to the cart block. The shopping 
+	cart should be able to calculate the total amount of the order.
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<a href="#">
+		<div class="cart_img">
+			<img src="img/png/shopping_cart.png" alt="cart_img">
+		</div>
+	</a>
+	<div class="cart" id="cart">
+		<h1>Cart</h1>
+		<br>
+		<br>
+		<div class="goods">Items: </div>
+		<div class="count"></div>
+		<br>
+		<div class="prices">Price: </div>
+		<div class="item_price"></div>
+		<div class="clr1"></div>
+		<div class="clr1"></div>
+		<div class="item_1"></div>
+		<div class="item_2"></div>
+		<div class="item_3"></div>
+		<div class="total_price"></div>
+		<a href="#">
+			<div class="delete">Clean</div>
+		</a>
+		<div class="clr1"></div>
+		<a href="#">
+			<div class="buy">Buy</div>
+		</a>
+	</div>
+	<div id="gallery">
+		<div class="clr"></div>
+		<div class="product">
+			<img src="img/1.jpg">
+			<span class="test">Price: $3000</span>
+			<div class="clr1"></div>
+			<input type="button" value="Add to Cart" class="buy_1">
+		</div>
+		<div class="product">
+			<img src="img/2.jpg">
+			<span>Price: $200000</span>
+			<div class="clr1"></div>
+			<input type="button" value="Add to Cart" class="buy_2">
+		</div>
+		<div class="product">
+			<img src="img/3.jpg">
+			<span>Price: $7000000</span>
+			<div class="clr1"></div>
+			<input type="button" value="Add to Cart" class="buy_3">
+		</div>
+	</div>
+</body>
+</html>

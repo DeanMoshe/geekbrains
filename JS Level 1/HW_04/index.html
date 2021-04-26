@@ -1,0 +1,47 @@
+<!--
+    Homework 4.1:
+
+    Write a function that converts a number to an object. 
+    Passing a number from 0 to 999 to the input, we should receive an object at the output, in which units, 
+    tens and hundreds are described in the corresponding properties. For example, 
+    for the number 245 we should get the following object: {‘units’: 5, ‘tens’: 4, ‘hundreds’: 2}. 
+    If the number is greater than 999, you must issue an appropriate message using console.log and 
+    return an empty object.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HW_04</title>
+</head>
+<body>
+    <script>
+        var num = prompt('Please, enter the number between 0 and 999: ');
+        var objNum = {}; //declaring an object.
+
+        function createObj(num) {
+            if (num >= 0 && num <= 999) {
+                switch (num.length) {
+                    case 3:
+                        objNum.hundreds = num[0];
+                        objNum.tens = num[1];
+                        objNum.units = num[2];
+                        break;
+                    case 2:
+                        objNum.tens = num[0];
+                        objNum.units = num[1];
+                        break;
+                    default:
+                        objNum.units = num[0];
+                }
+                return (objNum);
+            }
+            else {
+                console.log('Incorrect value');
+                return (objNum);
+            }
+        }
+        console.log(createObj(num));
+    </script>
+</body>
+</html>

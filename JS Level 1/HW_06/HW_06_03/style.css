@@ -1,0 +1,21 @@
+body {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.small_pict {
+	width: auto;
+	margin: 0 auto;
+}
+
+.small_pict-img {
+	width: 80px;
+}
+
+.slider {
+	z-index: 10;
+}
+
+.slider_btns {
+	z-index: 100;
+}

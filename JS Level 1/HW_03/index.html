@@ -1,0 +1,75 @@
+<!--  
+    Homework 3
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>HW_03</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+//Task #1 - Using a while loop print all the primes in the range from 0 to 100
+    document.write("<H2>Task #1 - Using a while loop print all the primes in the range from 0 to 100</H2>");
+    var num = 2;  //Primes start with "2"
+    while (num <= 100) {
+        if (isSimple(num)) {
+            document.write(num + " ");
+        }
+        num++;
+    }
+
+
+    //Testing whether a number is prime by trying to divide by all the numbers from 2 to number-1
+    function isSimple(number) {
+        var i = 2;
+        while (i < number) {
+            if (number % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
+
+/*Task #2 - Using a do ... while loop, write a function to output numbers from 0 to 10 so that the result looks like this: 
+    0 - zero
+    1 - odd number
+    2 - an even number
+    3 - odd number*/
+    document.write("<H2>Task #2 - Using a do ... while loop, write a function to output numbers from 0 to 10</H2>");
+    num = 0; 
+    do {
+        document.write(num + " - ");
+        if (num == 0) {
+            document.write("zero");
+        } else if (num % 2 ==0) {
+            document.write("an even number");
+        } else {
+            document.write("odd number");
+        }
+        document.write("<br>");
+        num++;
+    } while (num <= 10);
+
+
+/*Task #3 - Print numbers from 0 to 9 using the for loop, but NOT using the body of the loop. It should look like this:
+    for (...) {// empty here}*/
+    document.write("<H2>Task #3 - Print numbers from 0 to 9 using the for loop, but NOT using the body of the loop.</H2>");
+    for(var i = 0; i < 10; document.write(i++ + " ")) {}
+
+
+//Task #4 - Draw a pyramid using console.log, your pyramid should have 20 rows
+    document.write("<H2>Task #4 - Draw a pyramid using console.log, your pyramid should have 20 rows</H2>");
+    var x = "#"; 
+    for(num = 0; num < 20; num++) {
+        console.log(x);
+        x += "#";
+    }
+
+</script>
+</body>
+</html>

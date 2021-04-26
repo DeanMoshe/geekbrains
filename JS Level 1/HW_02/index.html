@@ -1,0 +1,147 @@
+<!--
+	Homework 2	
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>HW_02</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script type="text/javascript">
+/*Task #1 - Declare two integer variables - a and b and give them arbitrary initial values. Then write a script that works according to the following principle: 
+	- if a and b are positive, print their difference; 
+	- if a and b are negative, print their product; 
+	- if a and b are different signs, print their sum;*/
+		
+		function numbers(a, b){
+			if(a >= 0 && b >= 0){
+				return a - b;
+			}
+			else if(a < 0 && b < 0){
+				return a * b;
+			}
+			else if((a > 0 && b < 0) || (a < 0 && b > 0)){
+				return a + b;
+			}
+		}
+		var a = parseInt(prompt("Please, enter positive or negative integer value for variable a"));
+		var b = parseInt(prompt("Please, enter positive or negative integer value for variable b"));
+		alert(numbers(a, b));
+
+//Task #2 - Assign to variable a value in the range [0..15]. Using the switch operator organize the output of numbers from a to 15.
+		
+		function change(a){  
+			switch(a){
+				case 0:
+					document.write("0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15");
+					break;	       
+				case 1:
+					document.write("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15");
+					break;
+				case 2:
+					document.write("2,3,4,5,6,7,8,9,10,11,12,13,14,15");
+					break;
+				 case 3:
+					document.write("3,4,5,6,7,8,9,10,11,12,13,14,15");
+					break;
+				 case 4:
+					document.write("4,5,6,7,8,9,10,11,12,13,14,15");
+					break;
+				 case 5:
+					document.write("5,6,7,8,9,10,11,12,13,14,15");
+					break;
+				 case 6:
+					document.write("6,7,8,9,10,11,12,13,14,15");
+					break;
+				 case 7:
+					document.write("7,8,9,10,11,12,13,14,15");
+					break;
+				 case 8:
+					document.write("8,9,10,11,12,13,14,15");
+					break;
+				 case 9:
+					document.write("9,10,11,12,13,14,15");
+					break;
+				 case 10:
+					document.write("10,11,12,13,14,15");
+					break;
+				 case 11:
+					document.write("11,12,13,14,15");
+					break;
+				 case 12:
+					document.write("12,13,14,15");
+					break;
+				 case 13:
+					document.write("13,14,15");
+					break;
+				 case 14:
+					document.write("14,15");
+					break;
+				 case 15:
+					document.write("15");
+					break;
+			}
+		}
+		var a = parseInt(prompt("Please, enter positive integer in range 0 to 15"));
+		change(a);
+
+//Task #3 - Implement four basic arithmetic operations in the form of functions with two parameters. Be sure to use the return operator.
+		
+		function add(e, f){
+			return e + f;
+		}
+		function sub(e, f){
+			return e - f;
+		}
+		function mult(e, f){
+			return e * f;
+		}
+		function div(e, f){
+		  if(f!=0)
+			  return e/f;
+			return "error";    
+		}
+
+//Task #4 - Implement a function with three parameters: function mathOperation (arg1, arg2, operation), where arg1, arg2 are the argument values, operation is a string with the name of the operation. Depending on the transmitted value, perform one of the arithmetic operations (use the functions from point 5) and return the received value (use switch).
+		
+		function mathOperation(arg1, arg2, operation){
+			switch(operation){
+				case "add":
+				   return ("It's addition: " + add(arg1,arg2));
+				   break;
+				case "sub":
+					return("It's subtraction: " + (arg1 - arg2));
+					break;
+				case "mult":
+					return("It's multiplication: " + arg1 * arg2);
+				break;
+				case "div":
+					if(arg2!=0)
+					   return("It's division: " + arg1 / arg2);
+				break;    
+			}
+		}
+
+		var a = parseInt(prompt('Please, enter number a:'));
+		var b = parseInt(prompt('Please, enter number b:'));
+		var oper = prompt('Please, type operation ("add" - for addition, "sub" - for subtraction, "mult" - for multiplication, "div" - for division)');
+		alert(mathOperation(a, b, oper));
+
+//Task #5 - Using recursion, organize the function of raising a number to a power. Format: function power (val, pow), where val is the given number, pow is the degree.
+		
+		function power(val, pow){
+			if(pow == 1 || pow==0){
+				return 1;
+			}
+			return val * power(val, pow - 1);
+		}
+
+		var a = parseInt(prompt("Please, enter the number you want to raise to the power"));
+		var b = parseInt(prompt("Please, enter the degree"));
+		alert(power(a, b));
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--
+	1) Display game score in real time.
+	2) Generate temporary obstacles on the field.
+	3) * Remove field borders. Those, when crossing the border of the field, the snake appears from the opposite side.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake</title>
+	<link rel="stylesheet" href="Snake_VT.css">
+	<script src="Snake_VT.js" defer></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="buttons">
+			<div class="snake-start">Start</div>
+			<div class="snake-renew">New Game</div>
+		</div>
+		<div id="snake-field"></div>
+		<div class="score">
+			<span class="score-text">Score: </span><span class="score-point"></span>
+		</div>
+	</div>
+</body>
+</html>
