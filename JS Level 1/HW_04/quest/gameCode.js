@@ -21,7 +21,7 @@ function startGame() {
 				if (event == 'q') {
 					break;
 				}
-			   else {
+			else {
 					ok = isAnswer(works.b0, event);
 				}
 			} while (!ok);

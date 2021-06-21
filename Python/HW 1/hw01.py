@@ -1,4 +1,4 @@
-3# Task 1: A random integer is given, print the digits of the original number one by one.
+# Task 1: A random integer is given, print the digits of the original number one by one.
 number = int(input('Please, enter random integer: '))
 while number!=0:
     i=number%10

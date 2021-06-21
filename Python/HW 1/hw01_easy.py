@@ -18,7 +18,7 @@ b = temp
 print('Variable а:',a)
 print('Variable b:',b)
 
-# Method #2 - Mathemastics
+# Method #2 - Mathematical
 a = a+b
 b = a-b
 a = a-b
@@ -30,5 +30,3 @@ a,b = b,a
 print('Variable а:',a)
 print('Variable b:',b)
 print('end #2')
-
-
